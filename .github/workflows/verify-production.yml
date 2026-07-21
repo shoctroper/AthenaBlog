@@ -13,6 +13,7 @@ jobs:
     # Vercel deploys on every main push. The script waits for the matching
     # Production deployment, then checks its SHA and the public alias.
     runs-on: ubuntu-latest
+    timeout-minutes: 5
     steps:
       - uses: actions/checkout@v4
         with:
