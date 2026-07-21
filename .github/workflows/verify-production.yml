@@ -1,0 +1,28 @@
+name: Verify production release
+
+on:
+  deployment_status:
+
+permissions:
+  contents: read
+  deployments: read
+
+jobs:
+  verify-production:
+    # Vercel emits this event after it promotes the deployment.  This makes
+    # production verification compulsory after every successful production
+    # publish, without putting Vercel credentials in GitHub Actions.
+    if: >-
+      github.event.deployment.environment == 'Production' &&
+      github.event.deployment_status.state == 'success' &&
+      github.event.deployment.creator.login == 'vercel[bot]'
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: ${{ github.event.deployment.sha }}
+      - name: Compare deployed commit and verify public production URL
+        env:
+          GH_TOKEN: ${{ github.token }}
+          EXPECTED_COMMIT_SHA: ${{ github.event.deployment.sha }}
+        run: ./scripts/verify-prod.sh
