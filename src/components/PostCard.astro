@@ -1,5 +1,6 @@
 ---
 const { post } = Astro.props;
+import TypographyCover from './TypographyCover.astro';
 ---
-<article class="post-card"><a class="image" href={`/posts/${post.id}/`} aria-label={post.data.title}></a><div><p class="eyebrow">{post.data.tags[0]} · {post.data.readingTime}</p><h2><a href={`/posts/${post.id}/`}>{post.data.title}</a></h2><p>{post.data.description}</p>{post.data.videoUrl && <a class="video" href={post.data.videoUrl}>Ver el video de esta entrada →</a>}</div></article>
+<article class="post-card"><a class="image" href={`/posts/${post.id}/`} aria-label={post.data.title}><TypographyCover title={post.data.title} category={post.data.tags[0]} image={post.data.heroImage} /></a><div><p class="eyebrow">{post.data.tags[0]} · {post.data.readingTime}</p><h2><a href={`/posts/${post.id}/`}>{post.data.title}</a></h2><p>{post.data.description}</p>{post.data.videoUrl && <a class="video" href={post.data.videoUrl}>Ver el video de esta entrada →</a>}</div></article>
 <style>.post-card{background:var(--surface);border:1px solid var(--line);border-radius:12px;overflow:hidden}.post-card .image{display:block;aspect-ratio:16/8;background:linear-gradient(135deg,var(--panel),var(--accent))}.post-card>div{padding:1.4rem}.post-card h2{font-size:1.65rem;margin:.4rem 0}.post-card h2 a{text-decoration:none}.post-card p{color:var(--muted);margin:.4rem 0}.video{color:var(--accent);font-size:.85rem;text-decoration:none}</style>
