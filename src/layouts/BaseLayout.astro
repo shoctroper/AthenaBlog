@@ -1,8 +1,9 @@
 ---
 import { configuredSocials, site as siteConfig } from '../config/site';
-interface Props { title: string; description: string; canonical?: string }
-const { title, description, canonical } = Astro.props;
+interface Props { title: string; description: string; canonical?: string; socialImage?: string }
+const { title, description, canonical, socialImage } = Astro.props;
 const site = Astro.site?.toString().replace(/\/$/, '') ?? 'http://localhost:4321';
+const resolvedSocialImage = socialImage?.startsWith('http') ? socialImage : `${site}${socialImage ?? '/social/default.png'}`;
 ---
 <!doctype html>
 <html lang="es">
@@ -15,11 +16,11 @@ const site = Astro.site?.toString().replace(/\/$/, '') ?? 'http://localhost:4321
     <meta property="og:title" content={title} />
     <meta property="og:description" content={description} />
     <meta property="og:url" content={canonical ?? `${site}${Astro.url.pathname}`} />
-    <meta property="og:image" content={`${site}/og-default.svg`} />
+    <meta property="og:image" content={resolvedSocialImage} />
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content={title} />
     <meta name="twitter:description" content={description} />
-    <meta name="twitter:image" content={`${site}/og-default.svg`} />
+    <meta name="twitter:image" content={resolvedSocialImage} />
     <title>{title}</title>
     <script is:inline>
       const saved = localStorage.getItem('mario-theme');

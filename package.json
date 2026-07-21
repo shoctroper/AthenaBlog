@@ -5,10 +5,11 @@
   "type": "module",
   "scripts": {
     "dev": "astro dev",
-    "build": "node scripts/check-deks.mjs && astro check && astro build && node scripts/check-public-html.mjs && node scripts/check-card-titles.mjs",
+    "build": "node scripts/check-deks.mjs && node scripts/generate-social-cards.mjs && astro check && astro build && node scripts/check-public-html.mjs && node scripts/check-card-titles.mjs && node scripts/check-social-cards.mjs",
     "preview": "astro preview",
     "test": "node --test scripts/exporter/*.test.mjs",
-    "check:public": "node scripts/check-public-html.mjs"
+    "check:public": "node scripts/check-public-html.mjs",
+    "verify:preview": "./scripts/verify-preview.sh"
   },
   "dependencies": {
     "@astrojs/rss": "^4.0.12",
