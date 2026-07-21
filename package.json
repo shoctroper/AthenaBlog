@@ -5,7 +5,7 @@
   "type": "module",
   "scripts": {
     "dev": "astro dev",
-    "build": "astro check && astro build && node scripts/check-public-html.mjs",
+    "build": "astro check && astro build && node scripts/check-public-html.mjs && node scripts/check-card-titles.mjs",
     "preview": "astro preview",
     "test": "node --test scripts/exporter/*.test.mjs",
     "check:public": "node scripts/check-public-html.mjs"
