@@ -15,7 +15,11 @@ trustSummary: "Nota interna de muestra."
 scriptStatus: "unavailable"
 ---
 
-Una gran conversación suele empezar con algo pequeño: una observación que merece una segunda mirada.
+Una gran conversación suele empezar con algo pequeño: una observación que merece una segunda mirada. No se trata de tener todas las respuestas.
+
+> *Se trata de hacer mejores preguntas y dejar espacio para cambiar de opinión.*
+>
+> **— Mario Colli**
 
 No se trata de tener todas las respuestas. Se trata de hacer mejores preguntas, buscar contexto y dejar espacio para cambiar de opinión.
 
