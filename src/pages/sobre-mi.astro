@@ -3,7 +3,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 ---
 <BaseLayout title="Sobre mí · Mario Colli" description="Conoce a Mario Colli y los temas que explora.">
   <section class="profile">
-    <img class="profile-photo" src="/images/mario-colli-about.png" alt="Mario Colli junto a su equipo fotográfico" width="1152" height="2048" />
+    <img class="profile-photo" src="/images/mario-colli-about.png" alt="Mario Colli junto a su equipo fotográfico" width="1536" height="2730" />
     <div>
       <p class="eyebrow">Sobre mí</p>
       <h1>Curiosidad, proceso y juego.</h1>
@@ -12,4 +12,4 @@ import BaseLayout from '../layouts/BaseLayout.astro';
     </div>
   </section>
 </BaseLayout>
-<style>.profile-photo{width:100%;min-height:430px;height:100%;object-fit:cover;object-position:50% 30%;border-radius:50% 50% 1rem 1rem;border:1px solid var(--line)}@media(max-width:700px){.profile-photo{min-height:320px;max-height:440px}}</style>
+<style>.profile-photo{display:block;width:100%;height:520px;object-fit:cover;object-position:50% 30%;border-radius:18px;border:1px solid var(--line);box-shadow:10px 10px 0 var(--panel)}@media(max-width:700px){.profile-photo{height:420px}}</style>
