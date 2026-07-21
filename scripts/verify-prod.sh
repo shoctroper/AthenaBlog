@@ -52,7 +52,7 @@ for path in "${urls[@]}"; do
   # The production hostname itself contains "athena"; it is infrastructure,
   # not a leaked editorial/internal label.
   visible_check="$(printf '%s' "$html" | sed "s#${base_url}##g")"
-  if printf '%s' "$visible_check" | rg -i "$forbidden" >/dev/null; then
+  if printf '%s' "$visible_check" | grep -Eqi "$forbidden"; then
     echo "Prohibited public string at $path" >&2
     exit 1
   fi
@@ -68,7 +68,7 @@ echo "OK unknown route returns 404"
 # preview URL, was checked.
 canonical="$(curl -s "$base_url/" | grep canonical)"
 printf '%s\n' "$canonical"
-printf '%s' "$canonical" | rg -F "<link rel=\"canonical\" href=\"$base_url/\"" >/dev/null
+printf '%s' "$canonical" | grep -F "<link rel=\"canonical\" href=\"$base_url/\"" >/dev/null
 
 curl --fail --silent --show-error "$base_url/rss.xml" | validate_xml
 curl --fail --silent --show-error "$base_url/sitemap-index.xml" | validate_xml
