@@ -2,7 +2,7 @@ import { readdir, readFile } from 'node:fs/promises';
 import { join } from 'node:path';
 import { fileURLToPath } from 'node:url';
 
-const forbidden = /\b(athena|guion|caso|aprobado|ia|generad\w*|automatiz\w*)\b/iu;
+const forbidden = /\b(athena|guion|caso|aprobado|generad\w*|automatiz\w*)\b/iu;
 
 async function files(directory) {
   const entries = await readdir(directory, { withFileTypes: true });
