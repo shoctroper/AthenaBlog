@@ -1,8 +1,15 @@
 ---
-const preview = import.meta.env.DEV;
+import { configuredSocials } from '../config/site';
 ---
 <section class="hero-personal">
-  <div><p class="eyebrow">Ideas, tecnología y vida</p><h1>Hola, soy <em>Mario</em></h1>{preview && <p class="lede">PENDIENTE-MARIO: bio corta de dos o tres líneas sobre los temas que Mario explora.</p>}</div>
-  {preview && <div class="avatar" aria-label="PENDIENTE-MARIO: foto de Mario"></div>}
+  <div>
+    <p class="eyebrow">Ideas, tecnología y vida</p>
+    <h1>Hola, soy <em>Mario</em></h1>
+    <p class="lede">Exploro la intersección entre la tecnología, la fotografía y las ideas. Documento lo que aprendo, construyo y creo.</p>
+    <div class="hero-socials" aria-label="Redes sociales">
+      {configuredSocials.map((social) => <a href={social.url} target="_blank" rel="me noopener noreferrer">{social.name}</a>)}
+    </div>
+  </div>
+  <img class="avatar" src="/images/mario-colli-hero.png" alt="Mario Colli en su estudio" width="900" height="900" />
 </section>
-<style>.hero-personal{display:grid;grid-template-columns:1fr 220px;gap:3rem;align-items:center;padding:2rem 0 3rem}.hero-personal h1{font-size:clamp(3rem,7vw,5.5rem);margin:.2rem 0}.hero-personal em{color:var(--accent)}.avatar{width:200px;aspect-ratio:1;border-radius:50%;background:radial-gradient(circle at 50% 34%,var(--surface) 0 14%,transparent 14.5%),linear-gradient(135deg,var(--panel),var(--accent));justify-self:center}.hero-socials{display:flex;gap:.5rem;flex-wrap:wrap;margin-top:1rem}.hero-socials a{border:1px solid var(--line);border-radius:999px;padding:.35rem .7rem;text-decoration:none;font-size:.78rem}@media(max-width:700px){.hero-personal{grid-template-columns:1fr}.avatar{width:140px;order:-1;justify-self:start}}</style>
+<style>.hero-personal{display:grid;grid-template-columns:1fr 220px;gap:3rem;align-items:center;padding:2rem 0 3rem}.hero-personal h1{font-size:clamp(3rem,7vw,5.5rem);margin:.2rem 0}.hero-personal em{color:var(--accent)}.avatar{width:200px;aspect-ratio:1;border-radius:50%;object-fit:cover;object-position:50% 30%;justify-self:center;border:1px solid var(--line)}.hero-socials{display:flex;gap:.5rem;flex-wrap:wrap;margin-top:1rem}.hero-socials a{border:1px solid var(--line);border-radius:999px;padding:.35rem .7rem;text-decoration:none;font-size:.78rem}@media(max-width:700px){.hero-personal{grid-template-columns:1fr}.avatar{width:140px;order:-1;justify-self:start}}</style>

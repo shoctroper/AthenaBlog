@@ -1,5 +1,5 @@
 ---
-import { site as siteConfig } from '../config/site';
+import { configuredSocials, site as siteConfig } from '../config/site';
 interface Props { title: string; description: string; canonical?: string }
 const { title, description, canonical } = Astro.props;
 const site = Astro.site?.toString().replace(/\/$/, '') ?? 'http://localhost:4321';
@@ -40,7 +40,7 @@ const site = Astro.site?.toString().replace(/\/$/, '') ?? 'http://localhost:4321
   <body>
     <header><div class="shell"><nav><div><a class="brand" href="/">{siteConfig.name}</a><div class="descriptor">{siteConfig.descriptor}</div></div><div class="navlinks"><a href="/">Blog</a><a href="/videos/">Videos</a><a href="/sobre-mi/">Sobre mí</a><a href="/contacto/">Contacto</a><a class="subscribe" href="#newsletter">Suscríbete</a><button id="theme" aria-label="Cambiar tema">◐</button></div></nav></div></header>
     <main class="shell"><slot /></main>
-    <footer><div class="shell"><div class="footer-grid"><strong class="brand">{siteConfig.name}</strong><span><a href="/sobre-mi/">Sobre mí</a> · <a href="/contacto/">Contacto</a> · <a href="/rss.xml">RSS</a></span><span>Instagram · TikTok · YouTube · Facebook</span></div></div></footer>
+    <footer><div class="shell"><div class="footer-grid"><strong class="brand">{siteConfig.name}</strong><span><a href="/sobre-mi/">Sobre mí</a> · <a href="/contacto/">Contacto</a> · <a href="/rss.xml">RSS</a></span><span class="footer-socials">{configuredSocials.map((social) => <a href={social.url} target="_blank" rel="me noopener noreferrer">{social.name}</a>)}</span></div></div></footer>
     <script is:inline>document.querySelector('#theme')?.addEventListener('click', () => { const next = document.documentElement.dataset.theme === 'dark' ? 'light' : 'dark'; document.documentElement.dataset.theme = next; localStorage.setItem('mario-theme', next); });</script>
   </body>
 </html>

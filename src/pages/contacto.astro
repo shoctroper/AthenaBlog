@@ -1,7 +1,8 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
-import { site } from '../config/site';
+import { configuredSocials, site } from '../config/site';
 ---
 <BaseLayout title="Contacto · Mario Colli" description="Ponte en contacto con Mario Colli.">
-  <section><p class="eyebrow">Contacto</p><h1>Hablemos.</h1><p class="lede">Para colaboraciones, invitaciones y conversaciones.</p>{site.contactEmail ? <a class="pill" href={`mailto:${site.contactEmail}`}>Escribir a {site.contactEmail}</a> : import.meta.env.DEV && <p>PENDIENTE-MARIO: correo o formulario de contacto.</p>}</section>
+  <section><p class="eyebrow">Contacto</p><h1>Hablemos.</h1><p class="lede">Para colaboraciones, invitaciones y conversaciones, puedes encontrarme en estas redes.</p>{site.contactEmail && <a class="pill" href={`mailto:${site.contactEmail}`}>Escribir a {site.contactEmail}</a>}<div class="socials">{configuredSocials.map((social) => <a class="pill" href={social.url} target="_blank" rel="me noopener noreferrer">{social.name} <span aria-hidden="true">↗</span></a>)}</div></section>
 </BaseLayout>
+<style>.socials{display:flex;flex-wrap:wrap;gap:.65rem;margin-top:1.5rem}</style>
