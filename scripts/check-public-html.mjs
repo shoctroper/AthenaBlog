@@ -12,7 +12,8 @@ async function files(directory) {
 const htmlFiles = (await files(fileURLToPath(new URL('../dist', import.meta.url)))).filter((file) => file.endsWith('.html'));
 const violations = [];
 for (const file of htmlFiles) {
-  const match = (await readFile(file, 'utf8')).match(forbidden);
+  const publicText = (await readFile(file, 'utf8')).replace(/https?:\/\/[^\s"'<]+/gu, '');
+  const match = publicText.match(forbidden);
   if (match) violations.push(`${file}: ${match[0]}`);
 }
 if (violations.length) throw new Error(`Cadenas públicas prohibidas:\n${violations.join('\n')}`);

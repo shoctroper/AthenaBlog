@@ -1,1 +1,4 @@
-<section class="newsletter" id="newsletter"><div><p class="eyebrow">Newsletter</p><h2>Contenido nuevo, sin ruido.</h2><p>PENDIENTE-MARIO: enlace de suscripción.</p></div><a class="pill" href="mailto:?subject=Suscripción">Quiero recibirlo</a></section>
+---
+const newsletterUrl = import.meta.env.PUBLIC_NEWSLETTER_URL;
+---
+{newsletterUrl && <section class="newsletter" id="newsletter"><div><p class="eyebrow">Newsletter</p><h2>Contenido nuevo, sin ruido.</h2><p>Recibe las próximas notas directamente.</p></div><a class="pill" href={newsletterUrl}>Quiero recibirlo</a></section>}
