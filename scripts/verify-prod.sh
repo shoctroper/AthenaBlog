@@ -9,6 +9,7 @@ repo_root="$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)"
 expected_commit="${EXPECTED_COMMIT_SHA:-$(git -C "$repo_root" rev-parse HEAD)}"
 expected_commit="$(printf '%s' "$expected_commit" | tr '[:upper:]' '[:lower:]')"
 github_repo="${GITHUB_REPOSITORY:-shoctroper/AthenaBlog}"
+max_attempts="${VERCEL_WAIT_ATTEMPTS:-18}"
 
 command -v gh >/dev/null || { echo "gh is required to verify the Vercel production commit." >&2; exit 2; }
 command -v xmllint >/dev/null || { echo "xmllint is required to verify XML output." >&2; exit 2; }
@@ -16,16 +17,21 @@ command -v xmllint >/dev/null || { echo "xmllint is required to verify XML outpu
 # Vercel creates this GitHub Deployment record only after assigning a
 # Production deployment. It is the deployment-side commit authority, while
 # the curl checks below prove that the production alias serves the release.
-deployed_commit="$(gh api "repos/$github_repo/deployments?per_page=20" --jq '[.[] | select(.environment == "Production" and .creator.login == "vercel[bot]")][0].sha // empty')"
-deployed_commit="$(printf '%s' "$deployed_commit" | tr '[:upper:]' '[:lower:]')"
-if [[ -z "$deployed_commit" ]]; then
-  echo "No Vercel Production deployment was found for $github_repo." >&2
-  exit 1
-fi
-if [[ "$deployed_commit" != "$expected_commit" ]]; then
-  echo "Production commit mismatch: Vercel=$deployed_commit HEAD=$expected_commit" >&2
-  exit 1
-fi
+deployed_commit=""
+for attempt in $(seq 1 "$max_attempts"); do
+  deployed_commit="$(gh api "repos/$github_repo/deployments?per_page=20" --jq '[.[] | select(.environment == "Production" and .creator.login == "vercel[bot]")][0].sha // empty')"
+  deployed_commit="$(printf '%s' "$deployed_commit" | tr '[:upper:]' '[:lower:]')"
+  vercel_state="$(gh api "repos/$github_repo/commits/$expected_commit/status" --jq '[.statuses[] | select(.context == "Vercel")][0].state // empty')"
+  if [[ "$deployed_commit" == "$expected_commit" && "$vercel_state" == "success" ]]; then
+    break
+  fi
+  if [[ "$attempt" == "$max_attempts" ]]; then
+    echo "Production commit mismatch after waiting: Vercel=$deployed_commit status=${vercel_state:-missing} HEAD=$expected_commit" >&2
+    exit 1
+  fi
+  echo "Waiting for Vercel Production deployment ($attempt/$max_attempts): commit=${deployed_commit:-missing} status=${vercel_state:-missing}"
+  sleep 10
+done
 echo "OK deployed commit $deployed_commit matches HEAD"
 
 # These are internal-pipeline labels, not ordinary editorial vocabulary.  In
