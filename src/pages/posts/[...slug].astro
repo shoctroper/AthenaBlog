@@ -15,5 +15,6 @@ const articleJsonLd = { '@context':'https://schema.org', '@type':'Article', head
 ---
 <BaseLayout title={`${post.data.title} · Mario Colli`} description={post.data.description}>
   <article class="article-body"><p class="eyebrow">{post.data.tags[0]} · {post.data.readingTime}</p><h1>{post.data.title}</h1><p class="lede">{post.data.description}</p><div class="post-hero"><TypographyCover title={post.data.title} category={post.data.tags[0]} image={post.data.heroImage} showTitle={Boolean(post.data.heroImage)} /></div><p class="meta">{post.data.pubDate.toLocaleDateString('es-MX', { day:'numeric', month:'long', year:'numeric' })}</p><div class="tags">{post.data.tags.map((tag) => <a class="tag" href={`/tags/${encodeURIComponent(tag)}/`}>{tag}</a>)}</div><Content />{post.data.videoUrl && <p><a class="pill" href={post.data.videoUrl}>Ver el video de esta entrada</a></p>}<PrevNext previous={posts[currentIndex + 1]} next={posts[currentIndex - 1]} /><RelatedPosts posts={related} /><NewsletterCta /></article>
+  <style>.post-hero{height:64px;aspect-ratio:auto;margin:1.3rem 0 1.6rem;border-radius:8px}.article-body h1{font-size:clamp(2rem,5vw,2.75rem);line-height:1.15}.post-hero :global(.category-band){height:64px;border-radius:8px}</style>
   <script is:inline type="application/ld+json" set:html={JSON.stringify(articleJsonLd)} />
 </BaseLayout>

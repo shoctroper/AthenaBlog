@@ -1,6 +1,6 @@
 ---
 title: "El descanso como práctica cotidiana"
-description: "En el adulto, el sueño nocturno de unas ocho horas se organiza en 4-5 ciclos de unos 90-120 minutos, durante los cuales se transita de la vigilia a la somnolencia (fase I),."
+description: "En el adulto, el sueño nocturno de unas ocho horas se organiza en ciclos de 90 a 120 minutos."
 topic: "Salud"
 tags: ["Salud", "Ideas"]
 pubDate: 2026-07-21

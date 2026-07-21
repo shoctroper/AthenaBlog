@@ -1,6 +1,6 @@
 ---
 title: "Cuando una IA parece entender: dónde termina la metáfora"
-description: "En la actualidad, diversas inteligencias artificiales son ampliamente utilizadas, desde asistentes virtuales como Alexa, Google Assistant y Siri, hasta traductores como."
+description: "La IA ya organiza tareas cotidianas, pero entender su lenguaje exige distinguir metáfora, capacidad y límite."
 topic: "Tecnología"
 tags: ["Tecnología", "Ideas"]
 pubDate: 2026-07-21

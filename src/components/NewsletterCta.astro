@@ -1,4 +1,5 @@
 ---
 const newsletterUrl = import.meta.env.PUBLIC_NEWSLETTER_URL;
+const enabled = import.meta.env.DEV && Boolean(newsletterUrl);
 ---
-{newsletterUrl && <section class="newsletter" id="newsletter"><div><p class="eyebrow">Newsletter</p><h2>Contenido nuevo, sin ruido.</h2><p>Recibe las próximas notas directamente.</p></div><a class="pill" href={newsletterUrl}>Quiero recibirlo</a></section>}
+{enabled && <section class="newsletter" id="newsletter"><div><p class="eyebrow">Newsletter</p><h2>Contenido nuevo, sin ruido.</h2><p>Recibe las próximas notas directamente.</p></div><a class="pill" href={newsletterUrl}>Quiero recibirlo</a></section>}
