@@ -12,7 +12,16 @@ github_repo="${GITHUB_REPOSITORY:-shoctroper/AthenaBlog}"
 max_attempts="${VERCEL_WAIT_ATTEMPTS:-18}"
 
 command -v gh >/dev/null || { echo "gh is required to verify the Vercel production commit." >&2; exit 2; }
-command -v xmllint >/dev/null || { echo "xmllint is required to verify XML output." >&2; exit 2; }
+
+validate_xml() {
+  if command -v xmllint >/dev/null; then
+    xmllint --noout -
+  else
+    # GitHub's runner image does not guarantee xmllint. Python's standard
+    # library keeps this release gate dependency-free.
+    python3 -c 'import sys, xml.etree.ElementTree as ET; ET.parse(sys.stdin)'
+  fi
+}
 
 # Vercel creates this GitHub Deployment record only after assigning a
 # Production deployment. It is the deployment-side commit authority, while
@@ -61,6 +70,6 @@ canonical="$(curl -s "$base_url/" | grep canonical)"
 printf '%s\n' "$canonical"
 printf '%s' "$canonical" | rg -F "<link rel=\"canonical\" href=\"$base_url/\"" >/dev/null
 
-curl --fail --silent --show-error "$base_url/rss.xml" | xmllint --noout -
-curl --fail --silent --show-error "$base_url/sitemap-index.xml" | xmllint --noout -
+curl --fail --silent --show-error "$base_url/rss.xml" | validate_xml
+curl --fail --silent --show-error "$base_url/sitemap-index.xml" | validate_xml
 echo "OK production canonical/RSS/sitemap"
