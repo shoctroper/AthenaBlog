@@ -3,5 +3,5 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 import { site } from '../config/site';
 ---
 <BaseLayout title="Contacto · Mario Colli" description="Ponte en contacto con Mario Colli.">
-  <section><p class="eyebrow">Contacto</p><h1>Hablemos.</h1><p class="lede">Para colaboraciones, invitaciones y conversaciones.</p>{site.contactEmail ? <a class="pill" href={`mailto:${site.contactEmail}`}>Escribir a {site.contactEmail}</a> : <p>PENDIENTE-MARIO: correo o formulario de contacto.</p>}</section>
+  <section><p class="eyebrow">Contacto</p><h1>Hablemos.</h1><p class="lede">Para colaboraciones, invitaciones y conversaciones.</p>{site.contactEmail ? <a class="pill" href={`mailto:${site.contactEmail}`}>Escribir a {site.contactEmail}</a> : import.meta.env.DEV && <p>PENDIENTE-MARIO: correo o formulario de contacto.</p>}</section>
 </BaseLayout>

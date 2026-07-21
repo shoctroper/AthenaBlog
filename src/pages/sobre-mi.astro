@@ -2,5 +2,5 @@
 import BaseLayout from '../layouts/BaseLayout.astro';
 ---
 <BaseLayout title="Sobre mí · Mario Colli" description="Conoce a Mario Colli y los temas que explora.">
-  <section><p class="eyebrow">Sobre mí</p><h1>Una voz curiosa, en construcción.</h1><p class="lede">PENDIENTE-MARIO: texto personal de Mario sobre quién es, qué temas trata y por qué escribe.</p><p>PENDIENTE-MARIO: foto y biografía aprobadas por Mario.</p></section>
+  <section><p class="eyebrow">Sobre mí</p><h1>Una voz curiosa, en construcción.</h1>{import.meta.env.DEV && <p class="lede">PENDIENTE-MARIO: texto personal, foto y biografía aprobadas por Mario.</p>}</section>
 </BaseLayout>

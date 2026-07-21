@@ -4,5 +4,5 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 import VideoCard from '../components/VideoCard.astro';
 const videos = (await getCollection('videos')).sort((a,b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf());
 ---
-<BaseLayout title="Videos · Mario Colli" description="Videos y contenido de Mario Colli en redes."><p class="eyebrow">Videos</p><h1>Contenido para seguir explorando.</h1><div class="post-grid">{videos.map((video) => <VideoCard video={video} />)}</div></BaseLayout>
+{videos.some((video) => !video.data.title.startsWith('Próximo')) && <BaseLayout title="Videos · Mario Colli" description="Videos y contenido de Mario Colli en redes."><p class="eyebrow">Videos</p><h1>Contenido para seguir explorando.</h1><div class="post-grid">{videos.filter((video) => !video.data.title.startsWith('Próximo')).map((video) => <VideoCard video={video} />)}</div></BaseLayout>}
 <style>.post-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1rem}@media(max-width:700px){.post-grid{grid-template-columns:1fr}}</style>
