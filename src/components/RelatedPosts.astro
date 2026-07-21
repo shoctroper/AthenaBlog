@@ -1,0 +1,4 @@
+---
+const { posts } = Astro.props;
+---
+{posts.length > 0 && <section><p class="eyebrow">También te puede interesar</p><div class="related">{posts.map((post: any) => <a href={`/posts/${post.id}/`}><strong>{post.data.title}</strong><br /><small>{post.data.readingTime}</small></a>)}</div></section>}

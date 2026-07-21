@@ -1,0 +1,16 @@
+---
+import { getCollection } from 'astro:content';
+import BaseLayout from '../layouts/BaseLayout.astro';
+import HeroPersonal from '../components/HeroPersonal.astro';
+import TopicFilter from '../components/TopicFilter.astro';
+import PostCard from '../components/PostCard.astro';
+import NewsletterCta from '../components/NewsletterCta.astro';
+const posts = (await getCollection('posts')).sort((a,b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf());
+---
+<BaseLayout title="Mario Colli · Ideas, tecnología y vida" description="Ensayos y notas de Mario Colli sobre tecnología, ciencia, energía y vida.">
+  <HeroPersonal />
+  <TopicFilter tags={[...new Set(posts.flatMap((post) => post.data.tags))]} />
+  <section class="post-grid" aria-label="Entradas del blog">{posts.map((post) => <PostCard post={post} />)}</section>
+  <NewsletterCta />
+</BaseLayout>
+<style>.post-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:1.4rem}@media(max-width:700px){.post-grid{grid-template-columns:1fr}}</style>

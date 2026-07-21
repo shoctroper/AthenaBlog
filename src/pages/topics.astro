@@ -1,0 +1,5 @@
+---
+import { getCollection } from 'astro:content'; import BaseLayout from '../layouts/BaseLayout.astro';
+const tags = [...new Set((await getCollection('posts')).flatMap((p) => p.data.tags))].sort();
+---
+<BaseLayout title="Temas · Mario Colli" description="Índice de temas del blog."><p class="eyebrow">Temas</p><h1>Explora por tema</h1><div class="tags">{tags.map((tag) => <a class="tag" href={`/tags/${tag}/`}>{tag}</a>)}</div></BaseLayout>

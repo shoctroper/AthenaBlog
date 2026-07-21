@@ -1,0 +1,24 @@
+---
+title: "Internet no fue inevitable: fue una cadena de decisiones"
+description: "De ARPANET a los buscadores, una historia de infraestructura, instituciones y decisiones que definieron la red."
+topic: "Tecnología"
+tags: ["Tecnología", "Historia"]
+pubDate: 2026-07-20
+heroImage: ""
+readingTime: "4 min"
+draft: false
+caseId: "c38906a9-ad4e-4670-918f-c25847e93acd"
+sources:
+  - id: "doc-04-historia-de-internet"
+    label: "Historia de Internet"
+trustSummary: "Hechos provisionales del corpus de referencia."
+scriptStatus: "unavailable"
+---
+
+En 1998, tanto IANA como InterNIC se reorganizaron bajo el control de ICANN, una corporación de California sin ánimo de lucro contratada por el Departamento de Comercio de Estados Unidos para gestionar tareas críticas de Internet. Este desarrollo administrativo se sitúa en un contexto de evolución tecnológica constante. Ya en agosto de 1962, Licklider discutía su concepto de Galactic Network. Posteriormente, durante la década de 1960, diversos grupos exploraron la conmutación de paquetes, lo que permitió que en 1969 se creara la red ARPANET.
+
+Con el tiempo, la National Science Foundation estableció NSFNET, que terminó absorbiendo a ARPANET para consolidar una red científica y académica. Hacia 1990, Robert Cailliau y sus colaboradores definieron el sistema conocido como World Wide Web.
+
+El impacto financiero de esta industria tecnológica fue notable: la burbuja .com alcanzó su punto máximo el 10 de marzo de 2000, con el índice NASDAQ en 5048,62 puntos. Poco después, en agosto de 2001, el modelo de directorios comenzó a ser desplazado por los motores de búsqueda, consolidando el ascenso de Google.
+
+La red que hoy parece inevitable fue resultado de decisiones técnicas, institucionales y económicas tomadas durante décadas.

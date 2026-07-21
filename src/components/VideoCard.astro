@@ -1,0 +1,5 @@
+---
+const { video } = Astro.props;
+---
+<a class="video-card" href={video.data.url} target="_blank" rel="noopener"><span>{video.data.platform}</span><h2>{video.data.title}</h2><p>{video.data.description}</p></a>
+<style>.video-card{display:block;border:1px solid var(--line);border-radius:12px;padding:1.5rem;text-decoration:none;background:var(--surface)}.video-card span{color:var(--accent);font:11px var(--sans);letter-spacing:.12em;text-transform:uppercase}.video-card h2{margin:.5rem 0}.video-card p{color:var(--muted)}</style>

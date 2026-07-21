@@ -1,0 +1,6 @@
+---
+import { getCollection } from 'astro:content'; import BaseLayout from '../../layouts/BaseLayout.astro';
+export async function getStaticPaths() { const tags = new Set((await getCollection('posts')).flatMap((p) => p.data.tags)); return [...tags].map((tag) => ({ params:{ tag }, props:{ tag } })); }
+const { tag } = Astro.props; const posts = (await getCollection('posts')).filter((p) => p.data.tags.includes(tag));
+---
+<BaseLayout title={`Tema: ${tag} · Mario Colli`} description={`Entradas sobre ${tag}.`}><p class="eyebrow">Tema</p><h1>{tag}</h1>{posts.map((post) => <p><a href={`/posts/${post.id}/`}>{post.data.title}</a></p>)}</BaseLayout>

@@ -1,0 +1,23 @@
+{
+  "name": "athenaos-journal",
+  "private": true,
+  "version": "0.1.0",
+  "type": "module",
+  "scripts": {
+    "dev": "astro dev",
+    "build": "astro check && astro build && node scripts/check-public-html.mjs",
+    "preview": "astro preview",
+    "test": "node --test scripts/exporter/*.test.mjs",
+    "check:public": "node scripts/check-public-html.mjs"
+  },
+  "dependencies": {
+    "@astrojs/rss": "^4.0.12",
+    "@astrojs/sitemap": "^3.6.0",
+    "astro": "^5.13.0"
+  },
+  "devDependencies": {
+    "@astrojs/check": "^0.9.4",
+    "@lhci/cli": "^0.15.1",
+    "typescript": "^5.7.3"
+  }
+}

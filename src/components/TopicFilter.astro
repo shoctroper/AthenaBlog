@@ -1,0 +1,5 @@
+---
+const { tags } = Astro.props;
+---
+<nav class="topic-filter" aria-label="Filtrar por tema"><a class="active" href="/">Todo</a>{tags.map((tag: string) => <a href={`/tags/${encodeURIComponent(tag)}/`}>{tag}</a>)}</nav>
+<style>.topic-filter{display:flex;gap:.55rem;flex-wrap:wrap;margin:0 0 1.5rem}.topic-filter a{border:1px solid var(--line);border-radius:999px;padding:.4rem .8rem;text-decoration:none;font:11px var(--sans);letter-spacing:.1em;text-transform:uppercase}.topic-filter .active{background:var(--ink);color:var(--bg);border-color:var(--ink)}</style>

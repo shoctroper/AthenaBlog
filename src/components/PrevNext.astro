@@ -1,0 +1,5 @@
+---
+const { previous, next } = Astro.props;
+---
+{(previous || next) && <nav class="prev-next" aria-label="Navegación entre entradas">{previous ? <a href={`/posts/${previous.id}/`}>← {previous.data.title}</a> : <span />}{next ? <a href={`/posts/${next.id}/`}>{next.data.title} →</a> : <span />}</nav>}
+<style>.prev-next{display:grid;grid-template-columns:1fr 1fr;gap:1rem;margin:3rem 0}.prev-next a{border-top:1px solid var(--line);padding-top:1rem;text-decoration:none}.prev-next a:last-child{text-align:right}</style>
