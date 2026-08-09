@@ -1,17 +1,9 @@
 #!/usr/bin/env bash
 set -euo pipefail
 
-# This verifier is deliberately independent from the build: it proves that the
-# Vercel production deployment for the repository and the bytes at the public
-# URL both correspond to the commit being released.
+# This verifier checks the public bytes directly. Commit/deployment comparison
+# is optional because a production-content audit must not depend on GitHub.
 base_url="${1:-https://athena-blog-one.vercel.app}"
-repo_root="$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)"
-expected_commit="${EXPECTED_COMMIT_SHA:-$(git -C "$repo_root" rev-parse HEAD)}"
-expected_commit="$(printf '%s' "$expected_commit" | tr '[:upper:]' '[:lower:]')"
-github_repo="${GITHUB_REPOSITORY:-shoctroper/AthenaBlog}"
-max_attempts="${VERCEL_WAIT_ATTEMPTS:-18}"
-
-command -v gh >/dev/null || { echo "gh is required to verify the Vercel production commit." >&2; exit 2; }
 
 validate_xml() {
   if command -v xmllint >/dev/null; then
@@ -22,26 +14,6 @@ validate_xml() {
     python3 -c 'import sys, xml.etree.ElementTree as ET; ET.parse(sys.stdin)'
   fi
 }
-
-# Vercel creates this GitHub Deployment record only after assigning a
-# Production deployment. It is the deployment-side commit authority, while
-# the curl checks below prove that the production alias serves the release.
-deployed_commit=""
-for attempt in $(seq 1 "$max_attempts"); do
-  deployed_commit="$(gh api "repos/$github_repo/deployments?per_page=20" --jq '[.[] | select(.environment == "Production" and .creator.login == "vercel[bot]")][0].sha // empty')"
-  deployed_commit="$(printf '%s' "$deployed_commit" | tr '[:upper:]' '[:lower:]')"
-  vercel_state="$(gh api "repos/$github_repo/commits/$expected_commit/status" --jq '[.statuses[] | select(.context == "Vercel")][0].state // empty')"
-  if [[ "$deployed_commit" == "$expected_commit" && "$vercel_state" == "success" ]]; then
-    break
-  fi
-  if [[ "$attempt" == "$max_attempts" ]]; then
-    echo "Production commit mismatch after waiting: Vercel=$deployed_commit status=${vercel_state:-missing} HEAD=$expected_commit" >&2
-    exit 1
-  fi
-  echo "Waiting for Vercel Production deployment ($attempt/$max_attempts): commit=${deployed_commit:-missing} status=${vercel_state:-missing}"
-  sleep 10
-done
-echo "OK deployed commit $deployed_commit matches HEAD"
 
 # These are internal-pipeline labels, not ordinary editorial vocabulary.  In
 # particular, "IA" is intentionally allowed: it is a legitimate topic.

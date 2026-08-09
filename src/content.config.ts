@@ -10,6 +10,7 @@ const posts = defineCollection({
     pubDate: z.coerce.date(),
     topic: z.string().min(2),
     heroImage: z.string().optional(),
+    pullQuote: z.string().min(12).max(280).optional(),
     readingTime: z.string().min(3),
     videoUrl: z.string().url().optional(),
     draft: z.boolean().default(false),
