@@ -12,7 +12,7 @@ sources:
   - id: "porfiriato-035"
     label: "porfiriato-035"
 trustSummary: "34 Claims referenciados; 0 en disputa explícita."
-scriptStatus: "published"
+scriptStatus: "available"
 ---
 
 # Capítulo 1
