@@ -1,0 +1,317 @@
+{
+  "astro.config.mjs": {
+    "mtime": 1784641561.991857,
+    "ast_hash": "ddd0eae7a71e15f0c3a8b298ae645c98",
+    "semantic_hash": ""
+  },
+  "lighthouserc.cjs": {
+    "mtime": 1784658544.716745,
+    "ast_hash": "cf4e64d12f66cb42125ffa4349be3067",
+    "semantic_hash": ""
+  },
+  "package.json": {
+    "mtime": 1784658839.0032818,
+    "ast_hash": "ce882d416676ddf0d119fb4fa0270a61",
+    "semantic_hash": ""
+  },
+  "scripts/check-card-titles.mjs": {
+    "mtime": 1784646452.6976676,
+    "ast_hash": "c092fd71a8ee825b752f824d1d0057cc",
+    "semantic_hash": ""
+  },
+  "scripts/check-deks.mjs": {
+    "mtime": 1784649129.564878,
+    "ast_hash": "2dfe72831387e9ded2c3b6210f966eac",
+    "semantic_hash": ""
+  },
+  "scripts/check-public-html.mjs": {
+    "mtime": 1784642018.5286243,
+    "ast_hash": "300a2bcfa5ddfd9b7f8d78ce9489d0a8",
+    "semantic_hash": ""
+  },
+  "scripts/check-social-cards.mjs": {
+    "mtime": 1784658839.1184762,
+    "ast_hash": "440c3c0bc616b9483a1a605aa04389bb",
+    "semantic_hash": ""
+  },
+  "scripts/exporter/exporter.mjs": {
+    "mtime": 1784598702.383684,
+    "ast_hash": "aff52e1d74dda99b35303aab06cae922",
+    "semantic_hash": ""
+  },
+  "scripts/exporter/exporter.test.mjs": {
+    "mtime": 1784598702.6489565,
+    "ast_hash": "834a253552d2b4444daf88f78d4ed180",
+    "semantic_hash": ""
+  },
+  "scripts/exporter/from-case.mjs": {
+    "mtime": 1784642018.6411355,
+    "ast_hash": "d41451b0f35f1ce1b5f5aabc971d7e7d",
+    "semantic_hash": ""
+  },
+  "scripts/exporter/publish.mjs": {
+    "mtime": 1784598702.5381777,
+    "ast_hash": "891f47c58fb049d4b9c39c5c2c537eb3",
+    "semantic_hash": ""
+  },
+  "scripts/generate-social-cards.mjs": {
+    "mtime": 1784658471.9213083,
+    "ast_hash": "e02a42bf2dec125929e22c14520ad59b",
+    "semantic_hash": ""
+  },
+  "scripts/verify-preview.sh": {
+    "mtime": 1784658514.3492665,
+    "ast_hash": "c3c53cecc702272fe71504371293b050",
+    "semantic_hash": ""
+  },
+  "scripts/verify-prod.sh": {
+    "mtime": 1785172631.8548687,
+    "ast_hash": "25f405a9dd87cfc64fc954d96d9913ae",
+    "semantic_hash": ""
+  },
+  "src/components/HeroPersonal.astro": {
+    "mtime": 1784637471.8249032,
+    "ast_hash": "865da27eab3c497fbbacd234b815562d",
+    "semantic_hash": ""
+  },
+  "src/components/NewsletterCta.astro": {
+    "mtime": 1784649129.059158,
+    "ast_hash": "b619798e9c320af7046e5f96d4eeba78",
+    "semantic_hash": ""
+  },
+  "src/components/PostCard.astro": {
+    "mtime": 1784660460.4386415,
+    "ast_hash": "51d2088087fba9052a64a12fb55aaae1",
+    "semantic_hash": ""
+  },
+  "src/components/PrevNext.astro": {
+    "mtime": 1784661022.0893528,
+    "ast_hash": "1f2077b9626cd890a31628dbddd2d79a",
+    "semantic_hash": ""
+  },
+  "src/components/RelatedPosts.astro": {
+    "mtime": 1784591909.9982662,
+    "ast_hash": "cf3f9178588a17515ec2cc90d80ab549",
+    "semantic_hash": ""
+  },
+  "src/components/TopicFilter.astro": {
+    "mtime": 1784591909.5284514,
+    "ast_hash": "fa2410853f7f2dc3a2cc2349c2ddc4cb",
+    "semantic_hash": ""
+  },
+  "src/components/TypographyCover.astro": {
+    "mtime": 1784646386.7652736,
+    "ast_hash": "a32a7446fae7de120b106f557906304c",
+    "semantic_hash": ""
+  },
+  "src/components/VideoCard.astro": {
+    "mtime": 1784591909.7102485,
+    "ast_hash": "57e8b22152dc3932b601bf2c41119809",
+    "semantic_hash": ""
+  },
+  "src/config/site.ts": {
+    "mtime": 1784641830.469347,
+    "ast_hash": "c11e6d8d476740091e1b4a9aeeb5e207",
+    "semantic_hash": ""
+  },
+  "src/content.config.ts": {
+    "mtime": 1785171988.2290113,
+    "ast_hash": "0dffc08219d2257ebe00ace4f16e7a6a",
+    "semantic_hash": ""
+  },
+  "src/layouts/BaseLayout.astro": {
+    "mtime": 1784734971.7376788,
+    "ast_hash": "94543bf00ed45c9de7196fdf79777859",
+    "semantic_hash": ""
+  },
+  "src/pages/404.astro": {
+    "mtime": 1784591957.9350183,
+    "ast_hash": "adfdb683f5ffdf7f60eb871400e87bbb",
+    "semantic_hash": ""
+  },
+  "src/pages/contacto.astro": {
+    "mtime": 1784601896.5433395,
+    "ast_hash": "dfff00d85a3ad238434d499730b9d216",
+    "semantic_hash": ""
+  },
+  "src/pages/index.astro": {
+    "mtime": 1784734933.2911165,
+    "ast_hash": "2c55b0e9aa39fa3ccdf7c21e1324e4ed",
+    "semantic_hash": ""
+  },
+  "src/pages/posts/[...slug].astro": {
+    "mtime": 1785171988.318142,
+    "ast_hash": "4bc882b0bcf2821a79e1245eecb37b01",
+    "semantic_hash": ""
+  },
+  "src/pages/rss.xml.js": {
+    "mtime": 1784591957.7421432,
+    "ast_hash": "81a981fd9bedfcaae71d1c8da7ee7068",
+    "semantic_hash": ""
+  },
+  "src/pages/sobre-mi.astro": {
+    "mtime": 1784659647.0675528,
+    "ast_hash": "2d288601063fe4dd2f5bf7aa561d713d",
+    "semantic_hash": ""
+  },
+  "src/pages/tags/[tag].astro": {
+    "mtime": 1784591986.7144449,
+    "ast_hash": "c1488559b345cf83acf3f711d8f28a41",
+    "semantic_hash": ""
+  },
+  "src/pages/topics.astro": {
+    "mtime": 1784591986.8128834,
+    "ast_hash": "28c5c10d560cf95f56733a166b48c9ad",
+    "semantic_hash": ""
+  },
+  "src/pages/videos.astro": {
+    "mtime": 1784602987.7694197,
+    "ast_hash": "1f5a067f157c3e8174d317396640b166",
+    "semantic_hash": ""
+  },
+  "tsconfig.json": {
+    "mtime": 1784565235.566421,
+    "ast_hash": "2468ad4201072028f1f60c1591299ac9",
+    "semantic_hash": ""
+  },
+  ".github/workflows/ci.yml": {
+    "mtime": 1784598702.8956501,
+    "ast_hash": "991f63cbe13dbe9d467113f3a25e6858",
+    "semantic_hash": ""
+  },
+  ".github/workflows/verify-production.yml": {
+    "mtime": 1784644115.32212,
+    "ast_hash": "292904d1ca24aefecbc98b9d280de702",
+    "semantic_hash": ""
+  },
+  "CONTENT_CONTRACT.md": {
+    "mtime": 1784592016.1780133,
+    "ast_hash": "14537e84e1bc557d1ed342bcf0bead32",
+    "semantic_hash": ""
+  },
+  "ops/STAGING_ROLLBACK.md": {
+    "mtime": 1784658514.5157514,
+    "ast_hash": "f0a1e2ee17c53f3fda1ff36022c6e608",
+    "semantic_hash": ""
+  },
+  "public/robots.txt": {
+    "mtime": 1784565237.0740278,
+    "ast_hash": "1cb97b12f372cd2287fb01af89a38795",
+    "semantic_hash": ""
+  },
+  "src/content/posts/audit-serie-porfiriato-en-tres-actos-acto-1.md": {
+    "mtime": 1786553725.773111,
+    "ast_hash": "125df8791e516e76c9650fb781283222",
+    "semantic_hash": ""
+  },
+  "src/content/posts/case-c-internet.md": {
+    "mtime": 1784598709.6453555,
+    "ast_hash": "5ff146d697afe42455f406738230394d",
+    "semantic_hash": ""
+  },
+  "src/content/posts/case-e5-sleep.md": {
+    "mtime": 1784603386.058387,
+    "ast_hash": "6f87c5d145715a88ff29770ea8009df3",
+    "semantic_hash": ""
+  },
+  "src/content/posts/decisiones-que-hicieron-internet.md": {
+    "mtime": 1784641998.7336307,
+    "ast_hash": "583092fee709eae243579be70b198550",
+    "semantic_hash": ""
+  },
+  "src/content/posts/descanso-una-practica-cotidiana.md": {
+    "mtime": 1784649129.2758617,
+    "ast_hash": "73aca149ef71b7d4c05eff1302b0889c",
+    "semantic_hash": ""
+  },
+  "src/content/posts/ia-y-la-metafora-de-entender.md": {
+    "mtime": 1785365943.8519363,
+    "ast_hash": "80ab8c532f5c5c260361c060789e003f",
+    "semantic_hash": ""
+  },
+  "src/content/posts/porfiriato-avanzamos-o-retrocedimos.md": {
+    "mtime": 1786553725.769512,
+    "ast_hash": "6e7f4469197226a3c092728deda8f7c9",
+    "semantic_hash": ""
+  },
+  "src/content/posts/primera-nota.md": {
+    "mtime": 1784659050.331803,
+    "ast_hash": "6553daa3da9e56e014d5f2c54c3ed4e2",
+    "semantic_hash": ""
+  },
+  "src/content/videos/proximamente.md": {
+    "mtime": 1784591958.083767,
+    "ast_hash": "208ceb93de12c0c66fa1b64b3ab5d4c1",
+    "semantic_hash": ""
+  },
+  "public/images/mario-colli-about.jpg": {
+    "mtime": 1784637460.7214794,
+    "ast_hash": "81af0362aff10e2641678c3bf65d6d2d",
+    "semantic_hash": ""
+  },
+  "public/images/mario-colli-about.png": {
+    "mtime": 1784601781.131461,
+    "ast_hash": "0e572c8a2c549d8f3c342716922c93cc",
+    "semantic_hash": ""
+  },
+  "public/images/mario-colli-hero.jpg": {
+    "mtime": 1784637460.4739606,
+    "ast_hash": "dffcc686839a374349801733ef032fc4",
+    "semantic_hash": ""
+  },
+  "public/images/mario-colli-hero.png": {
+    "mtime": 1784601781.1371884,
+    "ast_hash": "1e9dddc57f25b102bd89c0281c37e59f",
+    "semantic_hash": ""
+  },
+  "public/og-default.svg": {
+    "mtime": 1784592016.5424004,
+    "ast_hash": "0074d292484f146781be1c7b734cb5b6",
+    "semantic_hash": ""
+  },
+  "public/social/audit-serie-porfiriato-en-tres-actos-acto-1.png": {
+    "mtime": 1786474198.4949093,
+    "ast_hash": "0cfaa972e07c89b76f60bdb30f953243",
+    "semantic_hash": ""
+  },
+  "public/social/case-c-internet.png": {
+    "mtime": 1786474275.0491047,
+    "ast_hash": "d19d10b95c03b6243fd969b9f1aa611d",
+    "semantic_hash": ""
+  },
+  "public/social/case-e5-sleep.png": {
+    "mtime": 1786474275.050517,
+    "ast_hash": "7c75e52a2c138c3c4070d3a857cf621b",
+    "semantic_hash": ""
+  },
+  "public/social/decisiones-que-hicieron-internet.png": {
+    "mtime": 1786474275.0518513,
+    "ast_hash": "5f47c7067a2b2f6e72e9e6d90017446e",
+    "semantic_hash": ""
+  },
+  "public/social/default.png": {
+    "mtime": 1786474198.3460102,
+    "ast_hash": "c6d3b9eab948c11714b11e7a8eb4c293",
+    "semantic_hash": ""
+  },
+  "public/social/descanso-una-practica-cotidiana.png": {
+    "mtime": 1786474275.0531552,
+    "ast_hash": "330a0076dd4350bca012692c97d38488",
+    "semantic_hash": ""
+  },
+  "public/social/ia-y-la-metafora-de-entender.png": {
+    "mtime": 1786474275.0537186,
+    "ast_hash": "9289830ae81a2d1366d0826620a16de4",
+    "semantic_hash": ""
+  },
+  "public/social/porfiriato-avanzamos-o-retrocedimos.png": {
+    "mtime": 1786474199.310558,
+    "ast_hash": "ba38c976ab21f2808c182ec8180bcbb3",
+    "semantic_hash": ""
+  },
+  "public/social/primera-nota.png": {
+    "mtime": 1786474275.0547836,
+    "ast_hash": "577b3855f24a907b0b1e07ca6a661c25",
+    "semantic_hash": ""
+  }
+}
