@@ -5,3 +5,7 @@ dist/
 design/
 .lighthouseci/
 .vercel
+
+# graphify: cache y snapshots fechados son regenerables, no se versionan
+graphify-out/cache/
+graphify-out/2*/

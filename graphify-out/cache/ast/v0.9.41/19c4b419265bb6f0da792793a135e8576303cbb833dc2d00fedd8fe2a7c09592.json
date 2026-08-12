@@ -1,1 +1,0 @@
-{"nodes": [{"id": "$graphify-root$_src_components_videocard_astro", "label": "VideoCard.astro", "file_type": "code", "source_file": "src/components/VideoCard.astro", "source_location": "L1"}], "edges": [], "raw_calls": [], "parse_errors": {"first_error_line": 2, "multiline_error": false}}
