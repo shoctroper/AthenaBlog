@@ -9,3 +9,4 @@ design/
 # graphify: cache y snapshots fechados son regenerables, no se versionan
 graphify-out/cache/
 graphify-out/2*/
+/graphify-out/graph.json
