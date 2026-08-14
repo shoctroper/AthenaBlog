@@ -1,5 +1,5 @@
 import { execFile } from 'node:child_process';
-import { mkdir, readdir, readFile, rename, rm, writeFile } from 'node:fs/promises';
+import { copyFile, mkdir, readdir, readFile, rm, writeFile } from 'node:fs/promises';
 import { tmpdir } from 'node:os';
 import { join } from 'node:path';
 import { promisify } from 'node:util';
@@ -32,7 +32,7 @@ async function png(name, markup) {
   await writeFile(svgFile, markup);
   await exec('qlmanage', ['-t', '-s', '1200', '-o', work, svgFile]);
   await exec('sips', ['-c', '630', '1200', join(work, `${name}.svg.png`)]);
-  await rename(join(work, `${name}.svg.png`), join(destination, `${name}.png`));
+  await copyFile(join(work, `${name}.svg.png`), join(destination, `${name}.png`));
 }
 
 await mkdir(destination, { recursive: true });
