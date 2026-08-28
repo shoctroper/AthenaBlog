@@ -5,7 +5,7 @@ topic: "Salud y vida"
 tags: ["Ideas", "Salud", "Ciencia"]
 pubDate: 2026-07-20
 heroImage: ""
-readingTime: "3 min"
+readingTime: "2 min"
 draft: false
 caseId: "e5b33eee-c0ea-4bc1-acb1-0583e3255f9a"
 sources:

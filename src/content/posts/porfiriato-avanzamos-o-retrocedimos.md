@@ -1,8 +1,8 @@
 ---
 title: "Porfiriato: ¿avanzamos o retrocedimos?"
-description: "Cruz Baena asocia a niños de San Juan de la Cruz con arado y siembra, y a los de La Magdalena con siembra y recolección de fruta."
+description: "Porfiriato: ¿avanzamos o retrocedimos?: Los niños son el espejo donde se refleja la cruda realidad de una época marcada por el trabajo extenuante desde edades tempranas."
 topic: "Guion: Porfiriato: ¿avanzamos o retrocedimos?"
-tags: ["cruz", "baena", "asocia", "ninos", "juan", "arado", "siembra", "magdalena"]
+tags: ["Historia", "porfiriato", "avanzamos", "retrocedimos", "plan", "declara", "suprema", "principio"]
 pubDate: 2026-08-11
 heroImage: ""
 readingTime: "12 min"

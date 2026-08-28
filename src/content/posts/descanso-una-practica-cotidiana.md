@@ -5,7 +5,7 @@ topic: "Salud"
 tags: ["Salud", "Ideas"]
 pubDate: 2026-07-21
 heroImage: ""
-readingTime: "4 min"
+readingTime: "2 min"
 draft: false
 caseId: "7f6e34d2-c8fd-4699-8397-2cd70eb88ee3"
 sources:

@@ -1,11 +1,11 @@
 ---
-import { getCollection } from 'astro:content';
+import { getPublishedPostsByDate } from '../lib/posts';
 import BaseLayout from '../layouts/BaseLayout.astro';
 import HeroPersonal from '../components/HeroPersonal.astro';
 import TopicFilter from '../components/TopicFilter.astro';
 import PostCard from '../components/PostCard.astro';
 import NewsletterCta from '../components/NewsletterCta.astro';
-const posts = (await getCollection('posts')).sort((a,b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf());
+const posts = await getPublishedPostsByDate();
 ---
 <BaseLayout title="Mario Colli · Ideas, tecnología y vida" description="Ensayos y notas de Mario Colli sobre tecnología, ciencia, energía y vida.">
   <HeroPersonal />

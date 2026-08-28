@@ -5,7 +5,7 @@ topic: "Historia"
 tags: ["Historia", "Tecnología"]
 pubDate: 2026-07-21
 heroImage: ""
-readingTime: "4 min"
+readingTime: "1 min"
 draft: false
 caseId: "fd85860f-e1db-4517-9977-80edead37376"
 sources:

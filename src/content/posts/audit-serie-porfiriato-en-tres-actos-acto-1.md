@@ -1,8 +1,8 @@
 ---
 title: "AUDIT-SERIE: Porfiriato en tres actos — Acto 1"
-description: "Cruz Baena asocia a niños de San Juan de la Cruz con arado y siembra, y a los de La Magdalena con siembra y recolección de fruta."
+description: "AUDIT-SERIE: Porfiriato en tres actos — Acto 1: El paisaje de la infancia en las comunidades rurales durante el Porfiriato estaba marcado por la precocidad del trabajo físico."
 topic: "Guion: AUDIT-SERIE: Porfiriato en tres actos — Acto 1"
-tags: ["cruz", "baena", "asocia", "ninos", "juan", "arado", "siembra", "magdalena"]
+tags: ["Historia", "audit", "serie", "porfiriato", "tres", "actos", "acto", "plan"]
 pubDate: 2026-08-11
 heroImage: ""
 readingTime: "12 min"

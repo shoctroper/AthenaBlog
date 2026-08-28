@@ -5,7 +5,7 @@ topic: "Tecnología"
 tags: ["Tecnología", "Ideas"]
 pubDate: 2026-07-21
 heroImage: ""
-readingTime: "4 min"
+readingTime: "2 min"
 draft: false
 caseId: "dae86a0f-3453-4f20-ab3f-5c5566aaeead"
 sources:
