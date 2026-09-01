@@ -8,6 +8,7 @@ heroImage: ""
 readingTime: "12 min"
 draft: false
 caseId: "e9789a80-11c1-4e6c-8be0-57cda0c6a189"
+normalizedTopic: "audit serie porfiriato en tres actos acto 1"
 sources:
   - id: "porfiriato-035"
     label: "porfiriato-035"

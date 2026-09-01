@@ -8,6 +8,7 @@ heroImage: ""
 readingTime: "1 min"
 draft: false
 caseId: "c38906a9-ad4e-4670-918f-c25847e93acd"
+normalizedTopic: "internet nacio como un producto inevitable o como una serie de decisiones institucionales y tecnicas que podrian haber sido distintas"
 sources:
   - id: "doc-04-historia-de-internet"
     label: "Historia de Internet"

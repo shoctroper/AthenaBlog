@@ -8,6 +8,7 @@ heroImage: ""
 readingTime: "2 min"
 draft: false
 caseId: "dae86a0f-3453-4f20-ab3f-5c5566aaeead"
+normalizedTopic: "que significa decir que un sistema entiende y donde termina la metafora"
 sources:
   - id: "doc-10-inteligencia-artificial"
     label: "Corpus editorial de referencia"

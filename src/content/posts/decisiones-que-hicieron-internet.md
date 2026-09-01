@@ -8,6 +8,7 @@ heroImage: ""
 readingTime: "1 min"
 draft: false
 caseId: "fd85860f-e1db-4517-9977-80edead37376"
+normalizedTopic: "que decisiones cambiaron la red antes de que pareciera inevitable"
 sources:
   - id: "doc-04-historia-de-internet"
     label: "Corpus editorial de referencia"

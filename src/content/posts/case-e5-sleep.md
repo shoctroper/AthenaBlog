@@ -8,6 +8,7 @@ heroImage: ""
 readingTime: "2 min"
 draft: false
 caseId: "e5b33eee-c0ea-4bc1-acb1-0583e3255f9a"
+normalizedTopic: "por que dormir no es tiempo perdido sino una infraestructura biologica para la memoria y la vigilia"
 sources:
   - id: "doc-09-sueno"
     label: "Corpus Athena: sueño"

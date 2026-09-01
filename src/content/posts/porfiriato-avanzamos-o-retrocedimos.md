@@ -8,6 +8,7 @@ heroImage: ""
 readingTime: "12 min"
 draft: false
 caseId: "027799bb-a6c8-4483-a7f4-793192d2c0e9"
+normalizedTopic: "porfiriato avanzamos o retrocedimos"
 sources:
   - id: "porfiriato-035"
     label: "porfiriato-035"

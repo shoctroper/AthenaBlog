@@ -8,6 +8,7 @@ heroImage: ""
 readingTime: "1 min"
 draft: true
 caseId: "5c09eb4d-3bf8-462e-863b-a3ecfbf0f397"
+normalizedTopic: "como validar el valor de una automatizacion editorial antes de escalarla"
 sources:
   - id: "source.seed"
     label: "Hecho semilla para pruebas de orquestación"

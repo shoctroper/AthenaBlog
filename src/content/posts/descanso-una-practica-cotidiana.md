@@ -8,6 +8,7 @@ heroImage: ""
 readingTime: "2 min"
 draft: false
 caseId: "7f6e34d2-c8fd-4699-8397-2cd70eb88ee3"
+normalizedTopic: "como convertir evidencia sobre descanso en una practica cotidiana sin promesas medicas"
 sources:
   - id: "doc-09-sueno"
     label: "Corpus editorial de referencia"

@@ -18,6 +18,10 @@ const posts = defineCollection({
     sources: z.array(z.object({ id: z.string(), label: z.string(), url: z.string().url().optional() })).min(1),
     trustSummary: z.string().min(12).describe('internal: true'),
     scriptStatus: z.enum(['unavailable', 'planned', 'available']).describe('internal: true'),
+    // UNIFY-098 A4: forma normalizada del tema, para que el guardarrail de publicacion
+    // detecte un duplicado aunque el slug difiera. Optional a proposito: los posts
+    // anteriores al 2026-09-01 no lo llevan y deben seguir validando.
+    normalizedTopic: z.string().optional().describe('internal: true'),
   }),
 });
 
